@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>aaaaaa</title>
+	</head>
+	<body>
+		<input type="checkbox" name="" id="dd" value="" onclick="fnfour()" />全选/全不选
+		<div class="content" id="all">
+			<input type="checkbox" name="one" id="" value="" />篮球
+			<input type="checkbox" name="one" id="" value="" />排球
+			<input type="checkbox" name="one" id="" value="" />足球
+			<input type="checkbox" name="one" id="" value="" />兵乓球
+			<input type="checkbox" name="one" id="" value="" />橄榄球
+		</div>
+		<button type="button" onclick="fnone()">全选</button>
+		<button type="button" onclick="fntwo()">全不选</button>
+		<button type="button" onclick="fnthree()">反选</button>
+	</body>
+	<script type="text/javascript">
+		var one = document.getElementsByName("one")
+
+		function fnone() {
+			for (var i = 0; i < one.length; i++) {
+				one[i].checked = true
+			}
+		}
+
+		function fntwo() {
+			for (var i = 0; i < one.length; i++) {
+				one[i].checked = false
+			}
+		}
+
+		function fnthree() {
+			for (var i = 0; i < one.length; i++) {
+				if (one[i].checked == false) {
+					fnone()
+				} else {
+					fntwo()
+				}
+			}
+		}
+
+		function fnfour() {
+			var dd = document.getElementById("dd").checked
+			if (dd == true) {
+				fnone()
+			}else{
+				fntwo()
+			}
+		}
+	</script>
+</html>

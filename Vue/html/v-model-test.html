@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>aa</title>
+	</head>
+	<body>
+		<div id="one">
+			<input type="text" name="" id="one" value="" />
+			<p id="two">AAA</p>
+		</div>
+	</body>
+	<script>
+		function ss(){
+			var one = document.getElementById("one").value
+			var two = document.getElementById("two")
+			two.innerHTML = one
+		}
+		setInterval(()=>{
+		    ss()	
+		},1000)
+	</script>
+</html>

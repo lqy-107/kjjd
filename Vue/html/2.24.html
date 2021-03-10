@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<script src="../js/vue.js"></script>
+<body>
+<div id="app">
+    <div>
+        <button onclick="fnOne()"></button>
+        <button @click="fntwo"></button>
+    </div>
+</div>
+</body>
+<script>
+    const all = new Vue({
+        el:"#app",
+        data(){
+            return{
+                stu: {
+
+                }
+            }
+        },
+
+        methods: {
+            fntwo(){
+
+            }
+        }
+    })
+</script>
+<script>
+    var age = 13;
+    var stu = [
+        {
+            name: "小明",
+            sex: "男",
+            age: "12",
+        },
+        {
+            name: "小王",
+            sex: "男",
+            age: "12",
+        },
+    ]
+    function fnOne(){
+
+    }
+</script>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one {
+        margin: 100px;
+    }
+</style>
+
+<body>
+    <div class="one">
+        <button onclick="add()">增加</button>
+        <button onclick="del()">删除</button>
+        <button onclick="find()">查询</button>
+        <button onclick="xg()">修改</button><br>
+        请输入要添加的值：<input type="text" id="one"><br>
+        请输入要修改的值：<input type="text" id="two"><br><br>
+        这是对象中的值：<span id="three">---</span>
+    </div>
+</body>
+<script>
+    var stu = {
+
+    }
+    function add() {
+        var aa = document.getElementById("one").value
+        if (aa == "") {
+            alert("请输入添加的值")
+        } else {
+            alert("添加成功")
+            stu.name = aa
+            console.log(aa)
+        }
+    }
+    function del() {
+        delete stu.name
+        
+        document.getElementById("one").value = ""
+        document.getElementById("two").value = ""
+        document.getElementById("three").innerHTML = ""
+    }
+    function xg() {
+        var aa = document.getElementById("two").value
+        if (aa == "") {
+            alert("请输入修改内容")
+        } else {
+            alert("修改成功")
+            document.getElementById("three").innerHTML = stu.name
+            console.log(stu.name)
+        }
+
+    }
+    function find() {
+        console.log(stu.name)
+        if (stu.name == undefined) {
+            alert("暂无数据")
+        } else {
+            document.getElementById("three").innerHTML = stu.name
+            
+        }
+
+    }
+</script>
+
+</html>

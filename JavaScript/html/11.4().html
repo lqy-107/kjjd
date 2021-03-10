@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="fnone">测试</button>
+    <p>现在是北京时间：</p>
+    <span id="a">2020年11月4日</span>
+    
+
+    
+</body>
+<script>
+    function fnone(){
+        var a = new Date();
+        var year = a.getFullYear();
+        var month = a.getMonth()+1;
+        var day = a.getDate();
+        var hour = a.getHours();
+        var min = a.getMinutes();
+        var sec = a.getSeconds();
+        document.getElementById("a").innerHTML=year +"年"+month+"月"+day+"日"+hour+"时"+min+"分"+sec+"秒"
+
+        var time = a.getTime();
+
+    }
+    setInterval(()=>{
+        fnone();
+    },0)
+</script>
+</html>

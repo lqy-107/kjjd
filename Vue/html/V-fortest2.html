@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="all">
+    <div v-for="(,index) in arr" :key="index"></div>
+    <p>{{item.id}}</p>
+    <p>{{item.name}}</p>
+    <p>{{item.sex}}</p>
+    <p>{{index}}</p>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    const app = new Vue({
+        el:"#all",
+        data(){
+            return{
+                arr:[
+                    {
+                        id:1,
+                        name:"小明",
+                        sex:"男",
+                    },
+                    {
+                        id:2,
+                        name:"小红",
+                        sex:"女",
+                    },
+                    {
+                        id:3,
+                        name:"奥特曼",
+                        sex:"未知",
+                    }
+                ]
+
+
+            }
+            methods:{
+
+            }
+        }
+    })
+</script>
+</html>

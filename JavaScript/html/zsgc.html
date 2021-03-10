@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one {
+        display: flex;
+
+
+    }
+</style>
+
+<body>
+
+    <button onclick="zj()">增加</button>
+    <button onclick="sc()">删除</button>
+    <button onclick="cx()">查询</button>
+    <button onclick="xg()">修改</button><br>
+
+    请输入要添加的值：<input type="text" id="tj"><br>
+    请输入要修改的值：<input type="text" id="xg"><br>
+    这是对象中的值:<span id="jg">---</span><br>
+
+
+</body>
+<script>
+    var stu = {
+
+    }
+
+    function zj() {
+        var aa = document.getElementById("tj").value
+        // console.log(aa)
+        if (aa == "") {
+            alert("请输入内容!")
+        } else {
+            alert("增加成功！")
+            stu.name = aa
+            console.log(stu.name)
+        }
+
+    }
+    function sc() {
+        delete stu.name
+        console.log(stu.name)
+        document.getElementById("tj").value = ""
+        document.getElementById("xg").value = ""
+        document.getElementById("jg").innerHTML = ""
+
+
+    }
+
+    function xg() {
+        var aa = document.getElementById("xg").value
+        if (aa == "") {
+            alert("请输入修改内容")
+        } else {
+            document.getElementById("jg").innerHTML = aa
+            alert("修改成功！")
+            console.log(aa)
+        }
+    }
+    function cx() {
+        console.log(stu.name)
+        if (stu.name == undefined) {
+            alert("暂无数据")
+        } else {
+             document.getElementById("jg").innerHTML = stu.name
+        }
+    }
+</script>
+
+</html>

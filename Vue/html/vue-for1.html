@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="all">
+<!--    for循环遍历格式
+        v-for"(item,index) in 要循环的变量名 :key=index“
+        循环得到的结果就是item
+        一般用在div里
+
+-->
+    <div v-for="(item,index) in stu" :key="index">
+        <p>这是数组里面的名字: <sapn v-text="item.name"></sapn></p>
+        <p>这是数组里面的年龄: <span v-text="item.age"></span></p>
+        <p v-text="index"></p>
+    </div>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el:"#all",
+        data(){
+            return{
+                //变量数据写在这
+                stu:[
+                    {
+                        name: "王宇",
+                        age: 16,
+                        sex: "女",
+                    },
+                    {
+                        name: "宇王",
+                        age: 61,
+                        sex: "男",
+                    }
+                ]
+            }
+        },
+        methods:{
+
+        }
+
+    })
+</script>
+</html>

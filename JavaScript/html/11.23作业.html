@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>简易留言板</title>
+		<script type="text/javascript" src="vue/jquery.min.js">
+			
+		</script>
+	</head>
+	<style>
+		
+	</style>
+
+	<body>
+		<h1>简易留言板</h1>
+		<ul id="one"></ul>
+		<textarea name="" id="root" style="max-width: 200px;max-height: 200px;"></textarea>
+		<button onclick="fnone()" id="a">留言</button>
+		<button onclick="fntwo()" id="b">统计</button>
+
+	</body>
+	<script>
+		var root = document.getElementById("root")
+
+		function fnone() {
+			var one = document.getElementById("one")
+			var a = document.getElementById("root").value
+			if(a==""){
+				alert("请输入内容");
+			}
+			var bodys = document.body//父标签
+			//   document.getElementById("one").innerHTML = "<li>"+a+"</li>"+"&nbsp;"+"<span>删除</span>"
+			//   创建li节点   将textarea内容添加到li   将li标签节点插入到页面中
+
+			var lis = document.createElement("li") //创建li节点
+			lis.innerHTML = a + "&nbsp;<span>删除</span>" //将textarea内容添加到li
+			one.append(lis) //将li标签节点插入到页面中
+			document.getElementById("root").value = ""
+			var arr = document.getElementsByTagName("span")
+			for (var i = 0; i < arr.length; i++){
+				arr[i].onclick = function (){
+					one.removeChild(this.parentNode)
+				}
+			}
+
+
+		}
+
+		function fntwo() {
+			// document.getElementById
+			alert("一共有" +"li"+ "条信息");
+		}
+	</script>
+	
+
+</html>

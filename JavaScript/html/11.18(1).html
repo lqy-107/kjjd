@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .content{
+        display: flex;
+        justify-content: center;
+    }
+.a{
+    background-color: blue;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 130px;
+}
+</style>
+
+<body>
+    <div class="content">
+        <div class="a" id="one" onclick="fnone()"><p id="two">1</p></div>
+    </div>
+</body>
+<script>
+    var number = 0;
+    var one = document.getElementById("one")
+    var two = document.getElementById("two")
+    function fnone(){
+        
+        number++;
+        // if (number==1) {
+        //     one.style.backgroundColor = "green"
+        //     two.innerHTML = "2"
+        // } 
+        // if (number==2) {
+        //     one.style.backgroundColor = "red"
+        //     two.innerHTML = "3"
+        // }
+        // if (number==3) {
+        //      one.style.background = "orange"
+        //      two.innerHTML = "4"
+        // }
+        // if (number==4) {
+        //     one.style.background = "blue"
+        //     two.innerHTML = "1"
+        //     number=0
+        // }
+        switch (number) {
+            case 1:
+                one.style.background = "orange"
+                two.innerHTML = "111"
+                break;
+                case 2:
+                one.style.background = "red"
+                two.innerHTML = "222"
+                break;
+                case 3:
+                one.style.display = "green"
+                two.innerHTML = "333"
+                break;
+                case 4:
+                one.style.display = "blue"
+                two.innerHTML = "444"
+                break;
+
+        
+            default:
+                number=0;
+                break;
+        }
+    }
+</script>
+</html>

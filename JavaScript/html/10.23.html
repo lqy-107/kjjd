@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a{
+        height: 200px;
+        width: 200px;
+        background-color: red;
+    }
+    .b{
+        height: 200px;
+        width:200px;
+        background-color:green;
+        display:none;
+    }
+</style>
+<body>
+    <button onclick="fnone()">查询</button>
+    <p id="a">姓名：</p>
+    <p id="b">性别：</p>
+    <p id="c">年龄：</p>
+    <div class="a" id="aa"></div>
+    <div class="b" id="bb"></div>
+
+
+</body>
+<script>
+    function fnone() {
+        var fam = [
+            {
+                name: "小王",
+                sex: 1,
+                age: 11,
+            },
+            {
+                name: "老王",
+                sex: 1,
+                age: 30,
+            },
+            {
+                name: "王阿姨",
+                age:29,
+                sex:2,
+            }
+        ]
+        for(var d = 0;d<fam.length;d++){
+              document.getElementById("a").innerHTML+=fam[d].name
+              document.getElementById("b").innerHTML+=fam[d].age
+              if (fam[d].sex!=2) {
+                  document.getElementById("c").innerHTML+="男"
+              } else {
+                  document.getElementById("c").innerHTML+="女"
+              }
+        }
+    }
+    document.getElementById("aa")
+    
+    document.getElementById("bb")
+    
+    
+</script>
+
+</html>

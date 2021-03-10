@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>oooooooooooooooooo</title>
+	</head>
+	<body>
+		<input type="checkbox" name="" id="aaa" value="" onclick="fnfour()">全选/全不选
+		<div id="a" class="one">
+			<input type="checkbox" name="one" id="" value="" />篮球
+			<input type="checkbox" name="one" id="" value="" />羽毛球
+			<input type="checkbox" name="one" id="" value="" />排球
+			<input type="checkbox" name="one" id="" value="" />乒乓球
+		</div>
+		<button type="button" onclick="fnone()">全选</button>
+		<button type="button" onclick="fntwo()">全不选</button>
+		<button type="button" onclick="fnthree()">反选</button>
+	</body>
+	<script type="text/javascript">
+		//全选
+		var one = document.getElementsByName("one")
+
+		function fnone() {
+			for (var i = 0; i < one.length; i++) {
+				console.log(one[i].checked)
+				one[i].checked = true
+			}
+		}
+
+		function fntwo() {
+			for (var i = 0; i < one.length; i++) {
+				one[i].checked = false
+				console.log(one[i].checked)
+
+			}
+		}
+
+		function fnthree() {
+			for (var i = 0; i < one.length; i++) {
+				if (one[i].checked == true) {
+					one[i].checked = false
+				} else {
+					one[i].checked = true
+				}
+			}
+		}
+
+		function fnfour() {
+			var aaa = document.getElementById("aaa").checked
+			if (aaa == true) {
+				fnone()
+			} else {
+				fntwo()
+			}
+		}
+	</script>
+</html>

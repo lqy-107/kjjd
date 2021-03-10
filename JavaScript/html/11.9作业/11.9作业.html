@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a {
+        display: flex;
+        justify-content: center;
+    }
+
+    .one {
+        width: 50%;
+
+    }
+
+    .two {
+        width: 50%;
+        display: none;
+    }
+
+    .three {
+        width: 50%;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="a">
+        <img src="./img/a.jpg" alt="" class="one">
+        <img src="./img/b.jpg" alt="" class="two">
+        <img src="./img/c.jpg" alt="" class="three">
+    </div>
+</body>
+<script>
+    var one = document.getElementsByClassName("one")
+    console.log(one);
+    var two = document.getElementsByClassName("two")
+    var three = document.getElementsByClassName("three")
+    one.onclick = function () {
+        alert("sblqy");
+        one.style.display = "none";
+        two.style.display = "flex";
+        three.style.display = "none";
+        setTimeout(() => {
+            one.style.display = "flex";
+            two.style.display = "none";
+            three.style.display = "none";
+        }, 3000)
+    }
+    two.onmouseout = function () {
+        one.style.display = "none";
+        two.style.display = "none";
+        three.style.display = "flex";
+        setTimeout(() => {
+            one.style.display = "flex";
+            two.style.display = "none";
+            three.style.display = "none"
+        }, 3000)
+    }
+    three.onmouseout = function () {
+            
+        setTimeout(() => {
+            one.style.display = "flex";
+            two.style.display = "none";
+            three.style.display = "none"
+        }, 3000)
+    }
+
+
+</script>
+
+</html>

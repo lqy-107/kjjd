@@ -1,0 +1,49 @@
+e<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p id="name">姓名：</p>
+        <p id="sex">性别：</p>
+        <p id="age">年龄：</p>
+        <button onclick="fnone()">渲染</button>
+    </div>
+</body>
+<script>
+    var arr = [
+        {
+            name:"小明",
+            sex:1,
+            age:13,
+        },
+        {
+            name:"小红",
+            sex:0,
+            age:12,
+        },
+        {
+            name:"小王",
+            sex:1,
+            age:13,
+        }
+    ]
+    function fnone(){
+        for(var i = 0;i<arr.length;i++) {
+            var one = arr[i].name
+            document.getElementById("name").innerHTML += one+"&nbsp"
+            document.getElementById("age").innerHTML += arr[i].age+"&nbsp"
+            if(arr[i].sex == 1){
+                document.getElementById("sex").innerHTML += "男"+"&nbsp"
+            }else{
+                document.getElementById("sex").innerHTML += "女"+"&nbsp"
+            }
+        }
+    }
+</script>
+</html>

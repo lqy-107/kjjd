@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one {
+        background-color: red;
+        width: 200px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 20px;
+
+    }
+
+    .two {
+        background-color: green;
+        width: 200px;
+        height: 200px;
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="one" id="ones">
+
+    </div>
+    <div class="two" id="twos"></div>
+
+</body>
+<script>
+    var one = document.getElementById("ones")
+    var two = document.getElementById("twos")
+    one.onmouseover = function () {
+        one.style.display = "none";
+        two.style.display = "flex";
+    }
+    two.onmouseover = function () {
+        one.style.display = "flex";
+        two.style.display = "none";
+    }
+</script>
+
+</html>

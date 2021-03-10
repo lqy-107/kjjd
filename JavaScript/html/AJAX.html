@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./Jquery.js"></script>
+</head>
+<body>
+
+</body>
+<script>
+    $(function(){
+       $.ajax({
+          url:"http://localhost/tp5.1.0/public/index/Test/index",
+           data:{
+             "hello":123,
+           },
+           success:function(data){
+               console.log(data);
+           }
+       });
+    });
+</script>
+</html>

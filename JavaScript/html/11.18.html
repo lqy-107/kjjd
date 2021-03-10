@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+.one{
+    width: 200px;
+    height: 200px;
+    background-color:red;
+}
+.two{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: none;
+}
+.three{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    display: none;
+}
+.four{
+    width: 200px;
+    height: 200px;
+    display: none;
+    background-color: orange;
+}
+.content{
+    display: flex;
+    justify-content: center;
+}
+</style>
+<body>
+    <div class="content">
+        <div class="one" onclick="fnone()" id="one"></div>
+        <div class="two" onclick="fntwo()" id="two"></div>
+        <div class="three" onclick="fnthree()" id="three"></div>
+        <div class="four" onclick="fnfour()" id="four"></div>
+    </div>
+</body>
+<script>
+    var one = document.getElementById("one")
+    var two = document.getElementById("two")
+    var three = document.getElementById("three")
+    var four = document.getElementById("four")
+function fnone(){
+    one.style.display = "none"
+    two.style.display = "flex"
+    three.style.display = "none"
+    four.style.display = "none"
+}
+function fntwo(){
+    one.style.display = "none"
+    two.style.display = "none"
+    three.style.display = "flex"
+    four.style.display = "none"
+}
+function fnthree(){
+    one.style.display = "none"
+    two.style.display = "none"
+    three.style.display = "none"
+    four.style.display = "flex"
+}
+function fnfour(){
+    one.style.display = "flex"
+    two.style.display = "none"
+    three.style.display = "none"
+    four.style.display = "none"
+}
+</script>
+</html>

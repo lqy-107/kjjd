@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+//事件
+<style>
+
+</style>
+
+<body>
+    <div>
+        <button onclick="fnone()" id="one">aaa</button>
+    </div>
+</body>
+<script>
+    function fnone(a,b) { 
+      var sum = a+b;
+      return sum;//返回结果方法调用，后续方法不执行
+      console.log(sum);
+    }
+    var one = document.getElementById("one")
+    one.addEventListener("click",function(){
+        console.log()
+    })
+
+</script>
+
+</html>

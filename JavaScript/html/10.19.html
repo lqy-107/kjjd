@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .wc {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+    }
+
+    .nb {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        display: none;
+    }
+</style>
+
+<body>
+    <button onclick="fnone()">测试</button>
+    <p id="a">姓名：</p>
+    <p id="b">年龄：</p>
+    <p id="c">性别：</p>
+    <div class="wc" id="one"></div>
+    <div class="nb" id="two"></div>
+</body>
+<script>
+    function fnone() {
+        var stu = [
+            {
+                name: "小王",
+                age: 13,
+                sex: 1,
+            },
+            {
+                name: "老王",
+                age: 30,
+                sex: 1,
+            },
+            {
+                name: "小王妈",
+                age: 28,
+                sex: 2,
+            }
+        ]
+        for (var d = 0; d < stu.length; d++) {
+            console.log(stu[d].name);
+            document.getElementById("a").innerHTML += stu[d].name;
+            document.getElementById("b").innerHTML += stu[d].age;
+            if (stu[d].sex != 2) {
+                document.getElementById("c").innerHTML += "男";
+            } else {
+                document.getElementById("c").innerHTML += "女";
+            }
+
+        }
+
+
+    }
+    var aa = document.getElementById("one")
+    var bb = document.getElementById("two")
+    aa.onmouseover = function(){
+        aa.style.display = "none";
+        bb.style.display = "flex";
+    }
+    bb.onmouseout = function(){
+        aa.style.display = "flex";
+        bb.style.display = "none";
+    }
+
+</script>
+
+</html>

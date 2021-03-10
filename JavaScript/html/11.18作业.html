@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    input {
+        border: none;
+        background: none;
+        outline: none;  /*定义无轮廓 */
+        height: 50%;
+        width: 100%; 
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+        padding-right: 40%;
+    }
+
+    .one {
+        padding: 20px 100px;
+        background-color: red;
+    }
+
+    .two {
+        padding: 20px 100px;
+        /* background-color: white; */
+    }
+
+    .three {
+        padding: 20px 100px;
+        /* background-color: white;  */
+    }
+
+    .down {
+        display: flex;
+        justify-content: center;
+        padding: 40px;
+    }
+
+    .onea {
+        border: 4px solid orange;
+        width: 80%;
+        height: 60px;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+    }
+
+    #a {
+        color: white;
+    }
+
+    #b {
+        color: red;
+    }
+
+    #c {
+        color: red;
+    }
+    
+</style>
+
+<body>
+   
+        <div class="content">
+            <div class="one" onclick="fnone()" id="aa">
+                <p id="a">宝贝</p>
+            </div>
+            <div class="two" onclick="fntwo()" id="bb">
+                <p id="b">天猫</p>
+            </div>
+            <div class="three" onclick="fnthree()" id="cc">
+                <p id="c">店铺</p>
+            </div>
+        </div>
+        <div class="down">
+            <div class="onea"><input type="text" placeholder="请输入购买商品"></div>
+        </div>
+ 
+</body>
+<script>
+    var aa = document.getElementById("aa")
+    var bb = document.getElementById("bb")
+    var cc = document.getElementById("cc")
+
+    var a = document.getElementById("a")
+    var b = document.getElementById("b")
+    var c = document.getElementById("c")
+
+    function fnone() {
+        aa.style.background = "red"
+        bb.style.background = "white"
+        cc.style.background = "white"
+        a.style.color = "white"
+        b.style.color = "red"
+        c.style.color = "red"
+    }
+    function fntwo() {
+        aa.style.background = "white"
+        bb.style.background = "red"
+        cc.style.background = "white"
+        a.style.color = "red"
+        b.style.color = "white"
+        c.style.color = "red"
+    }
+    function fnthree() {
+        aa.style.background = "white"
+        bb.style.background = "white"
+        cc.style.background = "red"
+        a.style.color = "red"
+        b.style.color = "red"
+        c.style.color = "white"
+    }
+</script>
+
+</html>

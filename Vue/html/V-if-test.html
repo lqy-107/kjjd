@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div id="all">
+    <button @click="fnone">生成</button>
+    <p v-if="arr<60">不及格</p>
+    <p v-else-if="arr>=60 && arr<90">及格</p>
+    <p v-else-if="arr>=90">优秀</p>
+    dd:<sapn v-text="arr"></sapn>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    var app = new Vue({
+        el:"#all",
+        data(){
+            return{
+                arr:0,
+            }
+        },
+        methods:{
+            fnone() {
+                this.arr = Math.floor(Math.random() * 100+1)
+            }
+        }
+    })
+</script>
+</html>

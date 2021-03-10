@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+    display: flex;
+    justify-content: center;
+    }
+    .down{
+        padding: 30px 0;
+        display: flex;
+        justify-content: center;
+    }
+.up{
+    display: flex;
+    justify-content: center;
+}
+.content{
+    border: 1px red solid;
+    ;
+}
+#one{
+    padding: 50px;
+    border: 1px red solid;
+    background-color: rgba(218, 29, 29  , 0.4)
+}
+#two{
+    padding:50px;
+    border: 1px red solid;
+    background-color: rgba(218, 29, 29  , 0.4)
+}
+#three{
+    padding: 50px;
+    border: 1px red solid;
+    background-color: rgba(218, 29, 29  , 0.4)
+}
+#twoa{
+    display: none;
+}
+#threea{
+    display: none;
+}
+</style>
+<body>
+    <div class="content">
+        <div class="up">
+            <div id="one" onclick="fnone()">A</div>
+            <div id="two" onclick="fntwo()">B</div>
+            <div id="three" onclick="fnthree()">C</div>
+        </div>
+        <div class="down">
+            <div id="onea">AA</div>
+            <div id="twoa">BB</div>
+            <div id="threea">CC</div>
+        </div>
+    </div>
+</body>
+<script>
+    var one = document.getElementById("one")
+    var two = document.getElementById("two")
+    var three = document.getElementById("three")
+    
+    var onea = document.getElementById("onea")
+    var twoa = document.getElementById("twoa")
+    var threea = document.getElementById("threea")
+
+    function fnone(){
+        one.style.backgroundColor = "white";
+        onea.style.display = "flex"
+        twoa.style.display = "none"
+        threea.style.display = "none"
+        two.style.backgroundColor = "rgba(218, 29, 29  , 0.4)"
+        three.style.backgroundColor = "rgba(218, 29, 29  , 0.4)"
+    }
+    function fntwo(){
+        one.style.backgroundColor = "rgba(218, 29, 29  , 0.4)"
+        three.style.backgroundColor = "rgba(218, 29, 29  , 0.4)"
+        two.style.backgroundColor = "white"
+        onea.style.display = "none"
+        twoa.style.display = "flex"
+        threea.style.display = "none"
+        
+    }
+    function fnthree(){
+        one.style.backgroundColor = "rgba(218, 29, 29  , 0.4)"
+        two.style.backgroundColor = "rgba(218, 29, 29  , 0.4)"
+        three.style.backgroundColor = "white"
+        onea.style.display = "none"
+        twoa.style.display = "none"
+        threea.style.display = "flex"
+    }
+</script>
+</html>

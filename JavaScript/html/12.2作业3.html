@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>ooooooooo</title>
+	</head>
+	<style>
+		body {
+			text-align: center;
+		}
+
+		img {
+			width: 200px;
+		}
+
+		.aa {
+			background-color: red;
+			width: 30px;
+			height: 30px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			margin-top: 600px;
+			margin-left: 80px;
+		}
+
+		.content {
+			font-size: 25px;
+		}
+
+		.one {
+			position: absolute;
+			left: 50px;
+			top: 0;
+		}
+
+		.two {
+			position: absolute;
+			right: 50px;
+			top: 0;
+		}
+	</style>
+	<body>
+		<div id="a" class="one">
+			<img src="11.9作业/img/1.jpg">
+			<div class="aa" id="onea">
+				<p id="one">5</p>
+			</div>
+		</div>
+		<div class="content">
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+			<p>???????????</p>
+		</div>
+		<div id="b" class="two">
+			<img src="11.9作业/img/1.jpg">
+			<div class="aa" id="twoa">
+				<p id="two">5</p>
+			</div>
+		</div>
+	</body>
+	<script>
+		var a = document.getElementById("a")
+		var b = document.getElementById("b")
+		var one = document.getElementById("one")
+		var two = document.getElementById("two")
+		var onea = document.getElementById("onea")
+		var twoa = document.getElementById("twoa")
+		var num = 5;
+		// var time = null	
+
+		time = setInterval(() => {
+			num--;
+			one.innerHTML = num
+			two.innerHTML = num
+			if (num == 0) {
+				clearInterval(time)
+				onea.innerHTML = "X"
+				twoa.innerHTML = "X"
+				onea.addEventListener("click", fnone)
+				twoa.addEventListener("click", fntwo)
+			}
+		}, 1000)
+
+
+
+		function fnone() {
+			a.style.display = "none"
+
+		}
+
+		function fntwo() {
+			b.style.display = "none"
+		}
+	</script>
+</html>

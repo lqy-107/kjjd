@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="../../jQuery+bootstrap响应式二级下拉导航菜单代码/js/jquery.min.js"></script>
+<style>
+    .a {
+        width: auto;
+        margin: 0 auto;
+        text-align: center;
+
+    }
+
+    .b {
+        display: flex;
+        justify-content: center;
+
+        /* text-indent: 20px; */
+        、
+    }
+
+    .b-1 {}
+
+    .b-ss {
+        letter-spacing: 10px;
+        display: flex;
+        border: 1px black solid;
+    }
+
+    .c {
+        margin: 0 auto;
+        width: 155px;
+        border: 1px solid black;
+    }
+
+</style>
+
+<body>
+    <div class="a">
+        <div class="b">
+            <div class="b-ss">
+                <div class="b-1">
+                    <span id="s1"">首页</span>
+            </div>
+            <div class=" b-2">
+                        <span id="s2">新闻</span>
+                </div>
+                <div class="b-3">
+                    <span id="s3">新闻</span>
+                </div>
+            </div>
+        </div>
+        <div class="c">
+            <span style="display: none;" id="sb1">sblqy</span>
+            <span style="display: none;" id="sb2">sblqy2</span>
+            <span style="display: none;" id="sb3">sblqy3</span>
+        </div>
+
+    </div>
+</body>
+<script>
+    $(function () {
+
+        $("#s1").click(function () {
+            $("#s1").css("background", "red");
+            $("#s2").css("background", ""); //清除span s2,s3 背景颜色
+            $("#s3").css("background", "");
+            $("#sb1").css("display", '');
+            $("#sb2").css("display", 'none');
+            $("#sb3").css("display", 'none');
+        });
+        $("#s2").click(function () {
+            $("#s1").css("background", "");
+            $("#s2").css("background", "red"); //清除span s1,s3 背景颜色
+            $("#s3").css("background", "");
+
+            $("#sb1").css("display", 'none');
+            $("#sb2").css("display", '');
+            $("#sb3").css("display", 'none');
+        });
+        $("#s3").click(function () {
+            $("#s1").css("background", "");
+            $("#s2").css("background", ""); //清除span s1,s2 背景颜色
+            $("#s3").css("background", "red");
+
+            $("#sb1").css("display", 'none');
+            $("#sb2").css("display", 'none5');
+            $("#sb3").css("display", '');
+        });
+
+
+
+
+    });
+
+</script>
+
+</html>

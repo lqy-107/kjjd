@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>vue2</title>
+	</head>
+	<style type="text/css">
+IUJKKKKKKKKKKKKKKKKKKKKKKKKKKKK8JJJKHH
+	</style>
+	<body>
+		<div id="one">
+			<p id="aa" v-text="name">刘泽浩</p>
+		</div>
+		<button v-on:click="fnone">改变名字</button>
+		<!-- <button @click="fnone">改变名字</button> -->
+	</body>
+	<script src="../js/vue.js"></script>
+	<script>
+		var app = new Vue({
+			//绑定页面结构
+			el: "#one",
+			//什么是data数据源>>当前页面的所有的数据
+			data() {
+				return {
+					// var name = "小红">>原生js写法
+					// name:"小红">>Vue里面的键值对写法
+					// name: "二逼"
+					obj: {
+						age: 23,
+						oi: true,
+					},
+
+
+
+				}
+			},
+			// methods对象 >> 所有的方法写在这里面
+			methods: {
+				//写方法的时候 不用加funciton
+				fnone() {
+					//this>> 整个vue的原型链>> 所有的变量或者方法或者..........都可以写直接使用this找到
+					var number = Math.floor(Math.random() * this.arr.length)
+					this.name = this.arr[number].name
+				}
+			}
+		})
+	</script>
+</html>

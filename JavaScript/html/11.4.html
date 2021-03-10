@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+</style>
+
+<body>
+    <button onclick="fnone()">
+        测试
+    </button>
+</body>
+<script>
+    // Date 对象》》》用来获取系统时间
+    var io = new Date();
+    console.log(io);
+    //获取年份  getFullyear
+    var ioyear = io.getFullYear();
+    console.log(ioyear);
+    //获取月份  getMouth
+    //获取月份时值会比实际的少一
+    var ioMonth = io.getMonth() + 1;
+    console.log(ioMonth)
+    //获取天份  getDate  
+    var ioday = io.getDate();//日
+    console.log(ioday);
+    var iohours = io.getHours();//时
+    console.log(iohours);
+    var iomin = io.getMinutes();//分
+    console.log(iomin)
+    var ioseconds = io.getSeconds();//秒
+    console.log(ioseconds);
+
+    // setTimeout  >>在指定一段时间之后  执行某操作一次    
+    // 格式：setTimeout(function(){逻辑操作},参数1)
+    // setInterval  >>在指定一段时间之后  重复执行某操作
+
+    //clearTimeout(定时器名称)clearInterval(定时器名称)  清除定时器
+    function fnone() {
+        // console.log("我丢外挂，我丢");
+        // setTimeout(() => {
+        //     console.log("我丢")
+        // }, 200)
+        setInterval(() => {
+                 console.log("卧槽外挂，卧槽")
+        },1000)
+    }
+    
+</script>
+
+</html>

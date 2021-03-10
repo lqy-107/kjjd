@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>轮播图</title>
+	</head>
+	<style type="text/css">
+		img {
+			width: 400px;
+		}
+
+		.content {
+			position: relative;
+			background-color: red;
+			width: 800px;
+			height: 335px;
+			text-align: center;
+			margin: 0 auto;
+			overflow: hidden;
+			margin-top: 100px;
+		}
+
+		.contents {
+			display: flex;
+			position:relative;
+		}
+	</style>
+	<body>
+		<div class="content">
+			<div class="contents" id="one">
+				<img src="11.9作业/img/1.jpg">
+				<img src="11.9作业/img/2.jpg">
+				<img src="11.9作业/img/3.jpg">
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var one = document.getElementById("one")
+		var aa = 0;
+
+		function move() {
+			if (aa >= -400) {
+				aa--;
+				one.style.left = aa + "px"
+			} else {
+				aa = 0
+			}
+		}
+		time = setInterval(() => {
+			move()
+		},1)
+		one.onmouseover = function (){
+			clearInterval(time)
+		}
+		one.onmouseout = function (){
+			/*time = */setInterval(()=>{
+				move()
+			},1)
+		}
+	</script>
+</html>

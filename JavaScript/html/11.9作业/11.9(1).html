@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .a {
+        display: flex;
+        justify-content: center;
+    }
+
+    #b {
+        display: none;
+    }
+
+    #c {
+        display: none;
+    }
+</style>
+
+<body>
+    <div class="a">
+        <img src="./img/1.jpg" alt="" id="a">
+        <img src="./img/2.jpg" alt="" id="b">
+        <img src="./img/3.jpg" alt="" id="c">
+    </div>
+</body>
+<script>
+    var a = document.getElementById("a")
+    var b = document.getElementById("b")
+    var c = document.getElementById("c")
+
+    a.onmouseover = function () {
+        b.style.display = "flex"
+        a.style.display = "none"
+        c.style.display = "none"
+    }
+    b.onmouseout = function () {
+        c.style.display = "flex"
+        b.style.display = "none"
+        setTimeout(function () {
+            a.style.display = "flex"
+            c.style.display = "none"
+            b.style.display = "none"
+        }, 3000);
+    }
+    c.onmouseover = function () {
+        b.style.display = "flex"
+        c.style.display = "none"
+        a.style.display = "none"
+
+    }
+</script>
+
+</html>

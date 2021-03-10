@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>afaf</title>
+</head>
+<style>
+    body{
+        justify-content: center;
+        display: flex;
+    }
+    .one{
+        background-color: red;
+        width: 300px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .one p{
+        font-size: 30px;
+        color: white;
+        font-family: 楷体;
+    }
+</style>
+<body>
+<div id="all">
+    <div class="one" @click="fnTest" v-model="one">
+        <p v-text="aa"></p>
+    </div>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+   const app = new Vue({
+       el:"#all",
+       data(){
+           return{
+               aa:111,
+               
+           }
+       },
+       methods:{
+            fnTest(){
+                this.aa = "222"
+
+            }
+       }
+   })
+</script>
+</html>

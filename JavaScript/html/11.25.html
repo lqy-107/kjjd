@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<body>
+		<h1>简易留言板</h1>
+		<ul id="contents"></ul>
+		<textarea style="max-width:200px ; max-height: 12.5rem;" id="content"></textarea>
+		<button type="button" onclick="fnone()" id="one">留言</button>
+		<button type="button" onclick="fntwo()" id="two">查询</button>
+	</body>
+	<script>
+		var content = document.getElementById("content")
+		var num=0;
+
+		function fnone() {
+			var contenta = content.value
+			if (contenta == "") {
+				alert("请输入留言！");
+				return false
+			}
+			var contents = document.getElementById("contents")
+			var lis = document.createElement("li")
+			lis.innerHTML = contenta + "&nbsp;<span>删除<span>"
+			contents.append(lis)
+			num++;
+			document.getElementById("content").value = ""
+			var arr = document.getElementsByTagName("span")
+			for (var i = 0; i < arr.length; i++) {
+				arr[i].onclick = function() {
+					contents.removeChild(this.parentNode)
+					num--;
+				}
+			}
+		}
+		function fntwo(){
+			alert("一共有"+num+"条留言");
+		}
+	</script>
+</html>

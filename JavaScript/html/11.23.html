@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .one {
+        font-size: 34px;
+        color: red;
+    }
+
+    .two {
+        font-size: 50px;
+        color: green;
+    }
+    .three{
+        font-size: 60px;
+        color: blue;
+    }
+    .four{
+        font-size: 70px;
+        color: orange;
+    }
+</style>
+
+<body>
+    <div>
+        <p class="one" id="a">aaa</p>
+        <button onclick="fnone()">修改类名</button>
+    </div>
+</body>
+<script>
+    var a = document.getElementById("a")
+    var number = 0;
+    function fnone() {
+        number++;
+        switch (number) {
+            case 1:
+                a.className = "two"
+                break;
+            case 2:
+                a.className = "three"
+            case 3:
+                a.className = "four"
+            default:
+                number = 0;
+                break;
+            
+        }
+        // if (number%2==0) {
+        //     a.className = "two"
+        // } else {
+        //     a.className = "one"
+        // }
+        
+    }
+</script>
+
+</html>

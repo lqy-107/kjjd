@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点菜系统</title>
+</head>
+<style>
+    body{
+        display: flex;
+        justify-content: center;
+
+
+    }
+    .content{
+        background-color: antiquewhite;
+        border-radius: 5px;
+        width: 600px;
+        height: 500px;
+        position:relative;
+        margin-top: 50px;
+        box-shadow:5px 5px 3px  #aaaaaa;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+    .one{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu{
+        width: 500px;
+        border: 1px darkgray solid;
+        text-align: center;
+        border-radius: 5px;
+
+    }
+    .two{
+        width: 100px;
+        height: 40px;
+        background-color: burlywood;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        margin-top: 40px;
+    }
+    .three p{
+        color: red;
+        font-size: 30px;
+    }
+</style>
+<body>
+<div class="content" id="all">
+    <div class="one">
+        <h2>还在纠结今天中午吃什么？</h2>
+        <h2>请看菜单</h2>
+        <h2>点击点菜按钮，随机选取菜品，让你不在纠结</h2>
+        <div class="menu"><p>油泼面 酸菜土豆丝 回锅肉 地锅鸡 辣子鸡 小油菜 木桶饭 酸辣粉丝 青椒肉丝 红烧肉 清蒸鱼 干偏西蓝花
+            牛柳 糖醋排骨 莴苣 蚂蚁上树 香菇炖鸡 口水鸡 烤鸭 豆腐 山药炒肉片</p></div>
+    </div>
+    <div class="two" @click="fnOne">
+        <p id="aa" >点菜</p>
+    </div>
+    <div class="three">
+        <p v-text="name">333</p>
+    </div>
+</div>
+</body>
+<script src="../js/vue.js"></script>
+<script>
+    new Vue({
+        el:"#all",
+        data(){
+            return{
+                name:"菜品",
+                arr :[
+                    {name:"油泼面"},{name:"酸菜土豆丝"},{name:"回锅肉"},{name:"地锅鸡"},{name:"辣子鸡"},{name:"小油菜"},
+                    {name:"木桶饭"},{name:"酸辣粉丝"},{name:"青椒肉丝"},{name:"红烧肉"},{name:"清蒸鱼"},{name:"干偏西兰花"},
+                    {name:"牛柳"},{name:"糖醋排骨"},{name:"莴苣"},{name:"蚂蚁上树"},{name:"香菇炖鸡"},{name:"口水鸡"},
+                    {name:"烤鸭"},{name:"豆腐"},{name:"山药炒肉片"}
+                ]
+            }
+        },
+        methods:{
+            fnOne() {
+                const num = Math.floor(Math.random()*this.arr.length);
+                this.name = this.arr[num].name
+            }
+        },
+        create:{
+
+        }
+    })
+</script>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title></title>
+	</head>
+	<style type="text/css">
+		img {
+			width: 300px;
+		}
+
+		body {
+			text-align: center;
+		}
+
+		#left {
+			position: absolute;
+			left: 10px;
+			top: 0;
+		}
+
+		#right {
+			position: absolute;
+			right: 10px;
+			top: 0;
+		}
+
+		.onea {
+			width: 30px;
+			height: 30px;
+			background-color: chartreuse;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			margin-top: 400px;
+			margin-left: 120px;
+		}
+
+		.mid {
+			font-size: 25px;
+		}
+	</style>
+	<body>
+		<div id="left">
+			<img src="11.9作业/img/1.jpg" alt="" class="imgs">
+			<div class="onea"id = "bb">
+				<p id="p1">5</p>
+			</div>
+		</div>
+		<div class="mid">
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+			<p>111111111111111</p>
+		</div>
+		<div id="right">
+			<img src="11.9作业/img/1.jpg" alt="" class="imgs">
+			<div class="onea" id="aa">
+				<p id="p2">5</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var P1 = document.getElementById("p1")
+		var P2 = document.getElementById("p2")
+		var left = document.getElementById("left")
+		var right = document.getElementById("right")
+		var num = 5;
+			var time = setInterval(() => {
+				num--;
+				P1.innerHTML = num
+				P2.innerHTML = num
+				if(num == 0){
+					clearInterval(time)
+					P1.innerHTML = "X"
+					P2.innerHTML = "X"
+					document.getElementById("bb").addEventListener("click",fnone)
+					document.getElementById("aa").addEventListener("click",fntwo)
+				}
+			}, 1000)
+			function fnone(){
+				left.style.display = "none"
+			}
+			function fntwo(){
+				right.style.display = "none"
+			}
+	</script>
+</html>
